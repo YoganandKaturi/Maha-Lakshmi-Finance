@@ -23,97 +23,118 @@
       <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
     <![endif]-->
 
+    <style>
+
+    #logo{
+      width:150px;
+      height:250px;
+    }
+    
+  </style>
+
   </head>
-  <body>  
+  <body  ">  
     <!-- Left column -->
-    <div class="templatemo-flex-row">
+    <div class="templatemo-flex-row" >
       <div class="templatemo-sidebar">
-        <header class="templatemo-site-header">
+        <header class="templatemo-site-header" align="center">
           <div class="square"></div>
-          <h1>mlf</h1>
+         <h2 style="color: #FFDF00" >Maha Lakshmi Finance</h2>
         </header>
-        <div class="profile-photo-container">
-          <img src="images/profile-photo.jpg" alt="Profile Photo" class="img-responsive">  
-          <div class="profile-photo-overlay"></div>
+        <div class="profile-photo-container" align="center">
+          <img src="images/logo.png" alt="Profile Photo" id="logo">  
+         
         </div>      
         
         <div class="mobile-menu-icon">
             <i class="fa fa-bars"></i>
         </div>
-        <nav class="templatemo-left-nav">          
+        <nav class="templatemo-left-nav" >          
           <ul>
-              <li><a href="customer1.html">Customer</a></li>
-            <li><a href="article.html" class="active">Article Finance</a></li>
+            <li><a href="customer1.html" class="active">Customer</a></li>
+            <li><a href="article.html" >Article Finance</a></li>
             <li><a href="interest.html">Cash Finance</a></li>
             <li><a href="oldmaterials.html">Buy Back Items</a></li>
             <li><a href="expense.html" >Employee Expenses</a></li>
-            <li><a href="accessories.html" >Accessories</a></li>
+            <li><a href="accessories.html">Accessories</a></li>
             <li><a href="summary.html" >Summary</a></li>
             <li><a href="index.html">Sign Out</a></li>
+
           </ul>  
         </nav>
       </div>
       <!-- Main content --> 
-      <div class="templatemo-content col-1 light-gray-bg">
+      <div class="templatemo-content col-1 light-gray-bg"  style="background-image: url(css/bg23.jpg)">
         <div class="templatemo-top-nav-container">
           <div class="row">
             <nav class="templatemo-top-nav col-lg-12 col-md-12">
               <ul class="text-uppercase">
+                <li><a href="customer1.html" class="active">Customer Details</a></li>
                 
-                <li><a href="articles.html" class="active">Articles</a></li>
-                <li><a href="finance.html">Finance</a></li>
-                <li><a href="transaction.html">Transactions</a></li>
+              </ul>  
+            </nav> 
+          </div>
+        </div><br>
+
+        <div class="templatemo-content col-1 light-gray-bg"  style="background-image: url(css/bg23.jpg)">
+        <div class="templatemo-top-nav-container" style="background-color: rgba(255, 255, 255, .4)">
+          <div class="row">
+            <nav class="templatemo-top-nav col-lg-12 col-md-12">
+              <ul class="text-uppercase">
+                <li><a href="customer1.html" ><font color="black" >New Customer </font></a></li>
+                <li><a href="exist_customer.html"  ><font color="black" >Existing Customer </font></a></li>
+                <li><a href="edit_customer.html" ><font color="black" >Edit Customer Details </font></a></li>
+                <li><a href="del_customer.html" class="active"><font color="#0000FF" >Delete Customer</font></a></li>
               </ul>  
             </nav> 
           </div>
         </div>
+        
+
+        
         <div class="templatemo-content-container" >
-          <div class="templatemo-flex-row flex-content-row">
-            <div class="templatemo-content-widget yellow-bg col-2">
+          <div class="templatemo-flex-row flex-content-row"  >
+            
 
               <div class="templatemo-content-widget templatemo-login-widget white-bg">
       <header class="text-center">
           
-            <h1>Articles</h1>
+            <h1>Customer Details</h1>
           </header>
-          <form action="index.html" class="templatemo-login-form">
-            <div class="form-group">
-              <span style="color: green;font-size: 15px;">Article Name : </span> 
-              <div class="input-group">  
-                    <div class="input-group-addon"></div>      
-                    <input type="text" class="form-control" placeholder="article name">           
-                </div>  
-            </div>
-
-            <div class="form-group">
-                          <div class="form-group">
-              <span style="color: green;font-size: 15px;">Type : </span>  
-              <div class="input-group">  
-                       
-                    <div class="input-group-addon"></div>      
-                    <input type="text" class="form-control" placeholder="type">           
-                </div>  
-            </div>
-              <span style="color: green;font-size: 15px;">Article ID : </span> 
+          <div class="form-group">
+              <span style="color: black;font-size: 15px;">Aadhar Number : </span> 
               <div class="input-group">  
                              
                     <div class="input-group-addon"></div> 
-                    <input type="text" class="form-control" placeholder="article ID">           
+                    <input type="text" class="form-control" placeholder="Aadhar">           
+                </div>  
+            </div>
+          <form action="index.html" class="templatemo-login-form">
+            <div class="form-group">
+              <span style="color: black;font-size: 15px;">Customer Name : </span> 
+              <div class="input-group">  
+                    <div class="input-group-addon"></div>      
+                    <input type="text" class="form-control" placeholder="name">           
                 </div>  
             </div>
 
             <div class="form-group">
-              <span style="color: green;font-size: 15px;">Article Cost : </span> 
+              <span style="color: black;font-size: 15px;">Contact Number : </span> 
               <div class="input-group">  
                            
                     <div class="input-group-addon"></div>   
-                    <input type="Number" class="form-control" placeholder="cost">           
+                    <input type="Tel" class="form-control" placeholder="number">           
                 </div>  
             </div>
 
+            
+            <div class="form-group">
+          <button type="submit" class="templatemo-blue-button width-100">Delete</button>
+        </div>
 
           </form>
-    </div>
+    
+   
         </div>
       </div>
     </div>
