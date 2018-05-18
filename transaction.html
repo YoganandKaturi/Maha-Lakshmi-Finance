@@ -61,8 +61,8 @@
               <ul class="text-uppercase">
                 
                 <li><a href="article.html">Articles</a></li>
-                <li><a href="finance.html" class="active">Finance</a></li>
-                <li><a href="transaction.html">Transactions</a></li>
+                <li><a href="finance.html" >Finance</a></li>
+                <li><a href="transaction.html" class="active">Transactions</a></li>
               </ul>  
             </nav> 
           </div>
@@ -74,7 +74,7 @@
               <div class="templatemo-content-widget templatemo-login-widget white-bg">
       <header class="text-center">
           
-            <h1>Finance Details</h1>
+            <h1>Transaction Details</h1>
           </header>
           <form action="index.html" class="templatemo-login-form">
 
@@ -107,78 +107,143 @@
             </div>
 
             <div class="form-group">
-              <span style="color: black;font-size: 15px;">Given Amount : </span> 
+              <span style="color: black;font-size: 15px;">Total Interest : </span> 
               <div class="input-group">  
-                    <div class="input-group-addon"></div>      
-                    <input type="number" class="form-control" placeholder="Amount funded">           
+                      
+                    <div class="input-group-addon"></div>        
+                    <input type="number" class="form-control" placeholder="Only Interest amount">           
                 </div>  
             </div>
 
             <div class="form-group">
-              <span style="color: black;font-size: 15px;">Installment Amount : </span> 
+              <span style="color: black;font-size: 15px;">Interest receive so far : </span>  
               <div class="input-group">  
-                             
-                    <div class="input-group-addon"></div> 
-                    <input type="number" class="form-control" placeholder="Every month Installments">           
+                    
+                    <div class="input-group-addon"></div>         
+                    <input type="number" class="form-control" placeholder="Total Interest/no of emis">           
                 </div>  
             </div>
 
             <div class="form-group">
-              <span style="color: black;font-size: 15px;">Documentation Charges : </span> 
+              <span style="color: black;font-size: 15px;">Due Date : </span> 
               <div class="input-group">  
-                           
-                    <div class="input-group-addon"></div>   
-                    <input type="number" class="form-control" placeholder="Processing fee">           
+                      
+                    <div class="input-group-addon"></div>        
+                    <input type="date" class="form-control" placeholder="EMI payment Date">           
                 </div>  
             </div>
 
             <div class="form-group">
-              <span style="color: black;font-size: 15px;">Reference Number : </span> 
+               <span style="color: black;font-size: 15px;">Installment receive dates : </span>  
               <div class="input-group">  
-                        
-                    <div class="input-group-addon"></div>      
-                    <input type="number" class="form-control" placeholder="Bill number">           
+                    
+                    <div class="input-group-addon"></div>        
+                    <input type="date" class="form-control" placeholder="EMI received date">           
                 </div>  
             </div>
 
             <div class="form-group">
-              <span style="color: black;font-size: 15px;">Total EMI's : </span>  
+              <span style="color: black;font-size: 15px;">Penalty Days : </span>
+              <div class="input-group">  
+                    <div class="input-group-addon"></div>        
+                    <input type="number" class="form-control" placeholder="Penalty Days">           
+                </div>  
+            </div>
+
+            <div class="form-group">
+              <span style="color: black;font-size: 15px;">Penalty Due Date : </span> 
+              <div class="input-group">  
+                    
+                    <div class="input-group-addon"></div>        
+                    <input type="date" class="form-control" placeholder="Due date">           
+                </div>  
+            </div>
+
+            <div class="form-group">
+              <span style="color: black;font-size: 15px;">Penalty Installment Received Date : </span>
               <div class="input-group">  
                        
-                    <div class="input-group-addon"></div>      
-                    <input type="number" class="form-control" placeholder="Number of Installments">           
+                    <div class="input-group-addon"></div>        
+                    <input type="date" class="form-control" placeholder="Installment Received date">           
                 </div>  
             </div>
 
             <div class="form-group">
-              <span style="color: black;font-size: 15px;">Total Amount : </span> 
+              <span style="color: black;font-size: 15px;">Remark : </span>
               <div class="input-group">  
-                       
-                    <div class="input-group-addon"></div>       
-                    <input type="number" class="form-control" placeholder="Interest+principle">           
+                      
+                    <div class="input-group-addon"></div>         
+                    <input type="textarea" class="form-control" >           
                 </div>  
             </div>
 
-           
+            <div class="form-group">
+          <button type="button" class="templatemo-blue-button width-100">Final Settlement</button>
+        </div>
+
+         <div class="form-group">
+              <span style="color: black;font-size: 15px;">Amount payed Till now : </span>
+              <div class="input-group">  
+                       
+                    <div class="input-group-addon"></div>        
+                    <input type="number" class="form-control" placeholder="Amount Received Till now">           
+                </div>  
+            </div>
+
+             <div class="form-group">
+              <span style="color: black;font-size: 15px;">Interest Payed till now : </span>
+              <div class="input-group">  
+                       
+                    <div class="input-group-addon"></div>        
+                    <input type="number" class="form-control" placeholder="Interest received">           
+                </div>  
+            </div>
+
+            
+             <div class="form-group">
+              <span style="color: black;font-size: 15px;">Amount should be payed : </span>
+              <div class="input-group">  
+                       
+                    <div class="input-group-addon"></div>        
+                    <input type="number" class="form-control" placeholder="Amount must be payed">           
+                </div>  
+            </div>
+
+
+             <div class="form-group">
+              <span style="color: black;font-size: 15px;">Interest should be Payed  : </span>
+              <div class="input-group">  
+                       
+                    <div class="input-group-addon"></div>        
+                    <input type="number" class="form-control" placeholder="Interest should be payed">           
+                </div>  
+            </div>
+
+
+             <div class="form-group">
+              <span style="color: black;font-size: 15px;">Amount settled : </span>
+              <div class="input-group">  
+                       
+                    <div class="input-group-addon"></div>        
+                    <input type="number" class="form-control" placeholder="Amount settled">           
+                </div>  
+            </div>
+
+
 
 
           </form>
-
-
-
     </div>
     
-    
+  
+               
+
+
+
+                
         
       </div>
     </div>
-
-
-    
-
-
-
-
     
     <!-- JS -->
     <script src="js/jquery-1.11.2.min.js"></script>      <!-- jQuery -->

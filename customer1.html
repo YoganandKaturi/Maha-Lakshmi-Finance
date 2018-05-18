@@ -31,6 +31,93 @@
     }
     
   </style>
+  <script>
+         function change(a){
+          if(a==1){
+            document.getElementById('add_customer').style = "";
+            document.getElementById('edit_customer').style = "display:none";
+            document.getElementById('edit_customer_verified').style = "display:none";
+            document.getElementById('delete_customer').style = "display:none";
+            document.getElementById('delete_customer_verified').style = "display:none";
+            document.getElementById('view_customer_verified').style = "display:none";
+            document.getElementById('view_customer').style = "display:none";
+          }
+          if(a==2){
+            document.getElementById('add_customer').style = "display:none";
+            document.getElementById('edit_customer').style = "";
+            document.getElementById('delete_customer').style = "display:none";
+            document.getElementById('view_customer').style = "display:none";
+            document.getElementById('delete_customer_verified').style = "display:none";
+            document.getElementById('view_customer_verified').style = "display:none";
+            document.getElementById('edit_customer_verified').style = "display:none";
+          }
+          if(a==3){
+            document.getElementById('add_customer').style = "display:none";
+            document.getElementById('edit_customer').style = "display:none";
+            document.getElementById('delete_customer').style = "";
+            document.getElementById('view_customer').style = "display:none";
+            document.getElementById('delete_customer_verified').style = "display:none";
+            document.getElementById('view_customer_verified').style = "display:none";
+            document.getElementById('edit_customer_verified').style = "display:none";
+          }
+          if(a==4){
+            document.getElementById('add_customer').style = "display:none";
+            document.getElementById('edit_customer').style = "display:none";
+            document.getElementById('delete_customer').style = "display:none";
+            document.getElementById('view_customer').style = "";
+            document.getElementById('delete_customer_verified').style = "display:none";
+            document.getElementById('view_customer_verified').style = "display:none";
+            document.getElementById('edit_customer_verified').style = "display:none";
+          }
+         }
+
+       </script>
+       <script>
+                function verify(a){
+                  if(a==1){
+                    var val = document.getElementById('uniqueid_edit_customer').value;
+                    if(val=="admin"){
+                     document.getElementById('edit_customer_verified').style=""; 
+                     document.getElementById('edit_customer').style="display:none";
+                     document.getElementById('error_edit_customer').style="display:none"; 
+                     console.log("no error")
+                    }
+                    else{
+                      document.getElementById('error_edit_customer').style="";
+                      document.getElementById('edit_customer_verified').style="display:none"; 
+                      console.log("error")
+                    }
+                  }
+                  if(a==2){
+                    var val = document.getElementById('uniqueid_delete_customer').value;
+                    if(val=="admin"){
+                     document.getElementById('delete_customer_verified').style=""; 
+                     document.getElementById('delete_customer').style="display:none"; 
+                     document.getElementById('error_delete_customer').style="display:none"; 
+                     console.log("no error")
+                    }
+                    else{
+                      document.getElementById('error_delete_customer').style="";
+                      document.getElementById('delete_customer_verified').style="display:none"; 
+                      console.log("error")
+                    }
+                  }
+                  if(a==3){
+                    var val = document.getElementById('uniqueid_view_customer').value;
+                    if(val=="admin"){
+                     document.getElementById('view_customer_verified').style=""; 
+                     document.getElementById('view_customer').style="display:none"; 
+                     document.getElementById('error_view_customer').style="display:none"; 
+                     console.log("no error")
+                    }
+                    else{
+                      document.getElementById('error_view_customer').style="";
+                      document.getElementById('view_customer_verified').style="display:none"; 
+                      console.log("error")
+                    }
+                  }
+                }
+              </script>
 
   </head>
   <body  ">  
@@ -38,8 +125,8 @@
     <div class="templatemo-flex-row" >
       <div class="templatemo-sidebar">
         <header class="templatemo-site-header" align="center">
-          <div class="square"></div>
-         <h2 style="color: #FFDF00" >Maha Lakshmi Finance</h2>
+         
+         
         </header>
         <div class="profile-photo-container" align="center">
           <img src="images/logo.png" alt="Profile Photo" id="logo">  
@@ -64,210 +151,495 @@
         </nav>
       </div>
       <!-- Main content --> 
-      <div class="templatemo-content col-1 light-gray-bg"  style="background-image: url(css/bg23.jpg)">
+      <div class="templatemo-content col-1 light-gray-bg">
         <div class="templatemo-top-nav-container">
           <div class="row">
             <nav class="templatemo-top-nav col-lg-12 col-md-12">
               <ul class="text-uppercase">
-                <li><a href="customer1.html" class="active">Customer Details</a></li>
-                
+               <h1 style="color: #FFDF00" align="middle">Maha Lakshmi Finance</h1>
+        </header>
               </ul>  
             </nav> 
           </div>
-        </div><br>
+        </div>
 
-        <div class="templatemo-content col-1 light-gray-bg"  style="background-image: url(css/bg23.jpg)">
-        <div class="templatemo-top-nav-container" style="background-color: rgba(255, 255, 255, .4)">
+         <div class="templatemo-content col-1 light-gray-bg">
+        <div class="templatemo-top-nav-container-1">
           <div class="row">
             <nav class="templatemo-top-nav col-lg-12 col-md-12">
               <ul class="text-uppercase">
-                <li><a href="customer1.html" class="active"><font color="#0000FF" >New Customer </font></a></li>
-                <li><a href="exist_customer.html" ><font color="black" >Existing Customer </font></a></li>
-                <li><a href="edit_customer.html" ><font color="black" >Edit Customer Details </font></a></li>
-                <li><a href="del_customer.html" ><font color="black" >Delete Customer </font></a></li>
+                <li><a href="#add" onclick="change(1)"><font style="color:  black">NEW</font></a></li>
+                <li><a href="#edit" onclick="change(2)"><font style="color: black">EDIT</font></a></li>
+                <li><a href="#delete" onclick="change(3)"><font style="color: black">DELETE</font></a></li>
+                <li><a href="#view" onclick="change(4)"><font style="color: black">VIEW</font></a></li>
+                
               </ul>  
             </nav> 
           </div>
         </div>
-        
+
+
+       
 
         
-        <div class="templatemo-content-container" >
-          <div class="templatemo-flex-row flex-content-row"  >
-            
+       <div class="templatemo-content-container" id="add_customer">
+          <div class="templatemo-content-widget white-bg">
+            <h2 class="margin-bottom-10" align="middle" style="color: #47bac1">Personal Details</h2>
+           
+            <form action="index.html" class="templatemo-login-form" method="post" enctype="multipart/form-data">
 
-              <div class="templatemo-content-widget templatemo-login-widget white-bg">
-      <header class="text-center">
+              <div class="row form-group">
+                <div class="col-lg-6 col-md-6 form-group">                  
+                    <label for="inputFirstName">Unique ID</label><br>
+                    <div class="margin-right-15 templatemo-inline-block">
+                      <input type="radio" name="radio" id="r4" value="">
+                      <label for="r4" class="font-weight-400"><span></span>Aadhar</label>
+                    </div>
+                    <div class="margin-right-15 templatemo-inline-block">
+                      <input type="radio" name="radio" id="r5" value="" checked>
+                      <label for="r5" class="font-weight-400"><span></span>Phone Number</label>
+                    </div>
+                    <input type="text" class="form-control" id="inputFirstName" placeholder="Aadhar / Phone Number">                  
+                </div>
+                <div class="col-lg-6 col-md-6 form-group">                                   
+                </div>
+              </div>
+
+              <div class="row form-group">
+                <div class="col-lg-6 col-md-6 form-group">                  
+                    <label for="inputFirstName">First Name</label>
+                    <input type="text" class="form-control" id="inputFirstName" placeholder="First Name">                  
+                </div>
+                <div class="col-lg-6 col-md-6 form-group">                  
+                    <label for="inputLastName">Last Name</label>
+                    <input type="text" class="form-control" id="inputLastName" placeholder="Last Name">                  
+                </div> 
+              </div>
+              <div class="row form-group">
+                <div class="col-lg-6 col-md-6 form-group">                  
+                    <label for="inputUsername">Contact Number</label>
+                    <input type="tel" class="form-control" id="inputUsername" placeholder="+91">                  
+                </div>
+                <div class="col-lg-6 col-md-6 form-group">                  
+                    <label for="inputEmail">Alternate Number</label>
+                    <input type="tel" class="form-control" id="inputEmail" placeholder="+91">                  
+                </div> 
+              </div><hr>
+              <h2 class="margin-bottom-10" align="middle" style="color: #47bac1">Address</h2><br>
+              <div class="row form-group">
+                <div class="col-lg-6 col-md-6 form-group">                  
+                    <label for="inputNewPassword">D/No</label>
+                    <input type="text" class="form-control" id="inputNewPassword" placeholder="Door Number">
+                </div>
+                <div class="col-lg-6 col-md-6 form-group">                  
+                    <label for="inputConfirmNewPassword">Street</label>
+                    <input type="text" class="form-control" id="inputConfirmNewPassword" placeholder="ABC Street">
+                </div> 
+              </div>
+              <div class="row form-group">
+                <div class="col-lg-6 col-md-6 form-group">                  
+                    <label for="inputNewPassword">Locality</label>
+                    <input type="text" class="form-control" id="inputNewPassword" placeholder="Locality">
+                </div>
+                <div class="col-lg-6 col-md-6 form-group">                  
+                    <label for="inputConfirmNewPassword">Village / Town / City</label>
+                    <input type="text" class="form-control" id="inputConfirmNewPassword" placeholder="Location">
+                </div> 
+              </div>
+               <div class="row form-group">
+                <div class="col-lg-6 col-md-6 form-group">                  
+                    <label for="inputNewPassword">District</label>
+                    <input type="text" class="form-control" id="inputNewPassword" placeholder="District">
+                </div>
+                <div class="col-lg-6 col-md-6 form-group">                  
+                    <label for="inputConfirmNewPassword">Pincode</label>
+                    <input type="text" class="form-control" id="inputConfirmNewPassword" placeholder="Pincode">
+                </div> 
+              </div>
+               <h2 class="margin-bottom-10" align="middle" style="color: #47bac1">Reference Details</h2><br>
+               <div class="row form-group">
+                <div class="col-lg-6 col-md-6 form-group">                  
+                    <label for="inputNewPassword">Reference ID</label>
+                    <input type="Number" class="form-control" id="inputNewPassword" placeholder="Reference ID">
+                </div>
+                <div class="col-lg-6 col-md-6 form-group">                  
+                    <label for="inputConfirmNewPassword">Reference Name</label>
+                    <input type="text" class="form-control" id="inputConfirmNewPassword" placeholder="Reference Name">
+                </div> 
+              </div>
+
+           
+              <div class="form-group text-right">
+                <button type="submit" class="templatemo-blue-button">Submit</button>
+                <button type="reset" class="templatemo-white-button">Reset</button>
+              </div>                           
+            </form>
+          </div>
           
-            <h1>Customer Details</h1>
-          </header>
-          <div class="form-group">
-              <span style="color: black;font-size: 15px;">Aadhar Number : </span> 
-              <div class="input-group">  
-                             
-                    <div class="input-group-addon"></div> 
-                    <input type="text" class="form-control" placeholder="Aadhar">           
-                </div>  
-            </div>
-          <form action="index.html" class="templatemo-login-form">
-            <div class="form-group">
-              <span style="color: black;font-size: 15px;">Customer Name : </span> 
-              <div class="input-group">  
-                    <div class="input-group-addon"></div>      
-                    <input type="text" class="form-control" placeholder="name">           
-                </div>  
-            </div>
-
-            <div class="form-group">
-              <span style="color: black;font-size: 15px;">Contact Number : </span> 
-              <div class="input-group">  
-                           
-                    <div class="input-group-addon"></div>   
-                    <input type="Tel" class="form-control" placeholder="number">           
-                </div>  
-            </div>
-
-            <div class="form-group">
-              <span style="color: black;font-size: 15px;">Alternate Number : </span> 
-              <div class="input-group">  
-                        
-                    <div class="input-group-addon"></div>      
-                    <input type="Number" class="form-control" placeholder="Alternate">           
-                </div>  
-            </div>
-
-            <h3 class="text_uppercase" style="color: black">Address : </h3><br>
-
-            <div class="form-group">
-              <span style="color: black;font-size: 15px;">D.No : </span>  
-              <div class="input-group">  
-                       
-                    <div class="input-group-addon"></div>      
-                    <input type="text" class="form-control" placeholder="dno">           
-                </div>  
-            </div>
-
-            <div class="form-group">
-              <span style="color: black;font-size: 15px;">Street : </span> 
-              <div class="input-group">  
-                       
-                    <div class="input-group-addon"></div>       
-                    <input type="text" class="form-control" placeholder="Street">           
-                </div>  
-            </div>
-
-            <div class="form-group">
-              <span style="color: black;font-size: 15px;">Locality : </span> 
-              <div class="input-group">  
-                      
-                    <div class="input-group-addon"></div>        
-                    <input type="text" class="form-control" placeholder="Locality">           
-                </div>  
-            </div>
-
-            <div class="form-group">
-              <span style="color: black;font-size: 15px;">Village / Town / City : </span>  
-              <div class="input-group">  
-                    
-                    <div class="input-group-addon"></div>         
-                    <input type="text" class="form-control" placeholder="location">           
-                </div>  
-            </div>
-
-            <div class="form-group">
-              <span style="color: black;font-size: 15px;">PIN : </span> 
-              <div class="input-group">  
-                      
-                    <div class="input-group-addon"></div>        
-                    <input type="number" class="form-control" placeholder="Pin">           
-                </div>  
-            </div>
-
-            <div class="form-group">
-               <span style="color: black;font-size: 15px;">Reference Name : </span>  
-              <div class="input-group">  
-                    
-                    <div class="input-group-addon"></div>        
-                    <input type="text" class="form-control" placeholder="Reference">           
-                </div>  
-            </div>
-
-            <div class="form-group">
-              <span style="color: black;font-size: 15px;">Contact Number : </span>
-              <div class="input-group">  
-                    <div class="input-group-addon"></div>        
-                    <input type="Number" class="form-control" placeholder="number">           
-                </div>  
-            </div>
-
-             <h3 class="text_uppercase" style="color: black">Address : </h3><br>
-
-            <div class="form-group">
-              <span style="color: black;font-size: 15px;">D.No : </span> 
-              <div class="input-group">  
-                    
-                    <div class="input-group-addon"></div>        
-                    <input type="text" class="form-control" placeholder="dno">           
-                </div>  
-            </div>
-
-            <div class="form-group">
-              <span style="color: black;font-size: 15px;">Street : </span>
-              <div class="input-group">  
-                       
-                    <div class="input-group-addon"></div>        
-                    <input type="text" class="form-control" placeholder="Street">           
-                </div>  
-            </div>
-
-            <div class="form-group">
-              <span style="color: black;font-size: 15px;">Locality : </span>
-              <div class="input-group">  
-                      
-                    <div class="input-group-addon"></div>         
-                    <input type="text" class="form-control" placeholder="Locality">           
-                </div>  
-            </div>
-
-            <div class="form-group">
-              <span style="color: black;font-size: 15px;">Village / Town / City : </span> 
-              <div class="input-group">  
-                         
-                    <div class="input-group-addon"></div>     
-                    <input type="text" class="form-control" placeholder="location">           
-                </div>  
-            </div>
-
-            <div class="form-group">
-              <span style="color: black;font-size: 15px;">PIN : </span> 
-              <div class="input-group">  
-                       
-                    <div class="input-group-addon"></div>       
-                    <input type="number" class="form-control" placeholder="Pin">           
-                </div>  
-            </div>
-
-            <div class="form-group">
-          <button type="reset" class="templatemo-blue-button width-100">Reset</button>
         </div>
 
-            <div class="form-group">
-          <button type="submit" class="templatemo-blue-button width-100">Submit</button>
+        <div class="templatemo-content-container" id="edit_customer" style="display:none;">
+          <div class="templatemo-content-widget white-bg">
+            <h2 class="margin-bottom-10" align="middle" style="color: #47bac1">Personal Details</h2>
+           
+            <form class="templatemo-login-form" enctype="multipart/form-data">
+
+              <div class="row form-group">
+                <div class="col-lg-6 col-md-6 form-group">                  
+                    <label for="inputFirstName">Unique ID</label><br>
+                    <input type="text" class="form-control" id="uniqueid_edit_customer" placeholder="Aadhar / Phone Number">                  
+                </div>
+              </div>
+              <div class="row form-group" id="error_edit_customer" style="display: none">
+                <div class="col-lg-6 col-md-6 form-group" style="font-size: 20px;color:red;">                  
+                    USER NOT FOUND              
+                </div>
+              </div>
+           
+              <div class="form-group text-right">
+                <button onclick="verify(1)" class="templatemo-blue-button">Check</button>
+              </div>                           
+            </form>
+          </div>
+          
         </div>
+        <div class="templatemo-content-container" id="delete_customer" style="display:none;">
+          <div class="templatemo-content-widget white-bg">
+            <h2 class="margin-bottom-10" align="middle" style="color: #47bac1">Personal Details</h2>
+           
+            <form action="#submitted" class="templatemo-login-form" enctype="multipart/form-data">
 
-          </form>
-    
-    
-  
-               
+              <div class="row form-group">
+                <div class="col-lg-6 col-md-6 form-group">                  
+                    <label for="inputFirstName">Unique ID</label><br>
+                    <input type="text" class="form-control" id="uniqueid_delete_customer" placeholder="Aadhar / Phone Number">                  
+                </div>
+              </div>
+              <div class="row form-group" id="error_delete_customer" style="display: none">
+                <div class="col-lg-6 col-md-6 form-group" style="font-size: 20px;color:red;">                  
+                    USER NOT FOUND              
+                </div>
+              </div>
+           
+              <div class="form-group text-right">
+                <button onclick="verify(2)" class="templatemo-blue-button">Check</button>
+              </div>                           
+            </form>
+          </div>
+          
+        </div>
+        <div class="templatemo-content-container" id="view_customer" style="display:none;">
+          <div class="templatemo-content-widget white-bg">
+            <h2 class="margin-bottom-10" align="middle" style="color: #47bac1">Personal Details</h2>
+           
+            <form action="#submitted" class="templatemo-login-form" enctype="multipart/form-data">
 
+              <div class="row form-group">
+                <div class="col-lg-6 col-md-6 form-group">                  
+                    <label for="inputFirstName">Unique ID</label><br>
+                    <input type="text" class="form-control" id="uniqueid_view_customer" placeholder="Aadhar / Phone Number">                  
+                </div>
+              </div>
+              <div class="row form-group" id="error_view_customer" style="display: none">
+                <div class="col-lg-6 col-md-6 form-group" style="font-size: 20px;color:red;">                  
+                    USER NOT FOUND              
+                </div>
+              </div>
+           
+              <div class="form-group text-right">
+                <button onclick="verify(3)" class="templatemo-blue-button">Check</button>
+              </div>                           
+            </form>
+          </div>
+          
+        </div>
+        <div class="templatemo-content-container" id="edit_customer_verified" style="display:none;">
+          <div class="templatemo-content-widget white-bg">
+            <h2 class="margin-bottom-10" align="middle" style="color: #47bac1">Edit Details</h2>
+           
+            <form action="index.html" class="templatemo-login-form" method="post" enctype="multipart/form-data">
 
+              <div class="row form-group">
+                <div class="col-lg-6 col-md-6 form-group">                  
+                    <label for="inputFirstName">Unique ID</label><br>
+                    <div class="margin-right-15 templatemo-inline-block">
+                      <input type="radio" name="radio" id="r4" value="">
+                      <label for="r4" class="font-weight-400"><span></span>Aadhar</label>
+                    </div>
+                    <div class="margin-right-15 templatemo-inline-block">
+                      <input type="radio" name="radio" id="r5" value="" checked>
+                      <label for="r5" class="font-weight-400"><span></span>Phone Number</label>
+                    </div>
+                    <input type="text" class="form-control" id="inputFirstName" placeholder="Aadhar / Phone Number">                  
+                </div>
+                <div class="col-lg-6 col-md-6 form-group">                                   
+                </div>
+              </div>
 
-                
+              <div class="row form-group">
+                <div class="col-lg-6 col-md-6 form-group">                  
+                    <label for="inputFirstName">First Name</label>
+                    <input type="text" class="form-control" id="inputFirstName" placeholder="First Name">                  
+                </div>
+                <div class="col-lg-6 col-md-6 form-group">                  
+                    <label for="inputLastName">Last Name</label>
+                    <input type="text" class="form-control" id="inputLastName" placeholder="Last Name">                  
+                </div> 
+              </div>
+              <div class="row form-group">
+                <div class="col-lg-6 col-md-6 form-group">                  
+                    <label for="inputUsername">Contact Number</label>
+                    <input type="tel" class="form-control" id="inputUsername" placeholder="+91">                  
+                </div>
+                <div class="col-lg-6 col-md-6 form-group">                  
+                    <label for="inputEmail">Alternate Number</label>
+                    <input type="tel" class="form-control" id="inputEmail" placeholder="+91">                  
+                </div> 
+              </div><hr>
+              <h2 class="margin-bottom-10" align="middle" style="color: #47bac1">Address</h2><br>
+              <div class="row form-group">
+                <div class="col-lg-6 col-md-6 form-group">                  
+                    <label for="inputNewPassword">D/No</label>
+                    <input type="text" class="form-control" id="inputNewPassword" placeholder="Door Number">
+                </div>
+                <div class="col-lg-6 col-md-6 form-group">                  
+                    <label for="inputConfirmNewPassword">Street</label>
+                    <input type="text" class="form-control" id="inputConfirmNewPassword" placeholder="ABC Street">
+                </div> 
+              </div>
+              <div class="row form-group">
+                <div class="col-lg-6 col-md-6 form-group">                  
+                    <label for="inputNewPassword">Locality</label>
+                    <input type="text" class="form-control" id="inputNewPassword" placeholder="Locality">
+                </div>
+                <div class="col-lg-6 col-md-6 form-group">                  
+                    <label for="inputConfirmNewPassword">Village / Town / City</label>
+                    <input type="text" class="form-control" id="inputConfirmNewPassword" placeholder="Location">
+                </div> 
+              </div>
+               <div class="row form-group">
+                <div class="col-lg-6 col-md-6 form-group">                  
+                    <label for="inputNewPassword">District</label>
+                    <input type="text" class="form-control" id="inputNewPassword" placeholder="District">
+                </div>
+                <div class="col-lg-6 col-md-6 form-group">                  
+                    <label for="inputConfirmNewPassword">Pincode</label>
+                    <input type="text" class="form-control" id="inputConfirmNewPassword" placeholder="Pincode">
+                </div> 
+              </div>
+               <h2 class="margin-bottom-10" align="middle" style="color: #47bac1">Reference Details</h2><br>
+               <div class="row form-group">
+                <div class="col-lg-6 col-md-6 form-group">                  
+                    <label for="inputNewPassword">Reference ID</label>
+                    <input type="Number" class="form-control" id="inputNewPassword" placeholder="Reference ID">
+                </div>
+                <div class="col-lg-6 col-md-6 form-group">                  
+                    <label for="inputConfirmNewPassword">Reference Name</label>
+                    <input type="text" class="form-control" id="inputConfirmNewPassword" placeholder="Reference Name">
+                </div> 
+              </div>
+
+           
+              <div class="form-group text-right">
+                <button type="submit" class="templatemo-blue-button">Submit</button>
+                <button type="reset" class="templatemo-white-button">Reset</button>
+              </div>                           
+            </form>
+          </div>
+          
+        </div>
+        <div class="templatemo-content-container" id="delete_customer_verified" style="display:none;">
+          <div class="templatemo-content-widget white-bg">
+            <h2 class="margin-bottom-10" align="middle" style="color: #47bac1">Personal Details</h2>
+           
+            <form action="index.html" class="templatemo-login-form" method="post" enctype="multipart/form-data">
+
+              <div class="row form-group">
+                <div class="col-lg-6 col-md-6 form-group">                  
+                    <label for="inputFirstName">Unique ID</label><br>
+                    <div class="margin-right-15 templatemo-inline-block">
+                      <input type="radio" name="radio" id="r4" value="">
+                      <label for="r4" class="font-weight-400"><span></span>Aadhar</label>
+                    </div>
+                    <div class="margin-right-15 templatemo-inline-block">
+                      <input type="radio" name="radio" id="r5" value="" checked>
+                      <label for="r5" class="font-weight-400"><span></span>Phone Number</label>
+                    </div>
+                    <input type="text" class="form-control" id="inputFirstName" placeholder="Aadhar / Phone Number">                  
+                </div>
+                <div class="col-lg-6 col-md-6 form-group">                                   
+                </div>
+              </div>
+
+              <div class="row form-group">
+                <div class="col-lg-6 col-md-6 form-group">                  
+                    <label for="inputFirstName">First Name</label>
+                    <input type="text" class="form-control" id="inputFirstName" placeholder="First Name">                  
+                </div>
+                <div class="col-lg-6 col-md-6 form-group">                  
+                    <label for="inputLastName">Last Name</label>
+                    <input type="text" class="form-control" id="inputLastName" placeholder="Last Name">                  
+                </div> 
+              </div>
+              <div class="row form-group">
+                <div class="col-lg-6 col-md-6 form-group">                  
+                    <label for="inputUsername">Contact Number</label>
+                    <input type="tel" class="form-control" id="inputUsername" placeholder="+91">                  
+                </div>
+                <div class="col-lg-6 col-md-6 form-group">                  
+                    <label for="inputEmail">Alternate Number</label>
+                    <input type="tel" class="form-control" id="inputEmail" placeholder="+91">                  
+                </div> 
+              </div><hr>
+              <h2 class="margin-bottom-10" align="middle" style="color: #47bac1">Address</h2><br>
+              <div class="row form-group">
+                <div class="col-lg-6 col-md-6 form-group">                  
+                    <label for="inputNewPassword">D/No</label>
+                    <input type="text" class="form-control" id="inputNewPassword" placeholder="Door Number">
+                </div>
+                <div class="col-lg-6 col-md-6 form-group">                  
+                    <label for="inputConfirmNewPassword">Street</label>
+                    <input type="text" class="form-control" id="inputConfirmNewPassword" placeholder="ABC Street">
+                </div> 
+              </div>
+              <div class="row form-group">
+                <div class="col-lg-6 col-md-6 form-group">                  
+                    <label for="inputNewPassword">Locality</label>
+                    <input type="text" class="form-control" id="inputNewPassword" placeholder="Locality">
+                </div>
+                <div class="col-lg-6 col-md-6 form-group">                  
+                    <label for="inputConfirmNewPassword">Village / Town / City</label>
+                    <input type="text" class="form-control" id="inputConfirmNewPassword" placeholder="Location">
+                </div> 
+              </div>
+               <div class="row form-group">
+                <div class="col-lg-6 col-md-6 form-group">                  
+                    <label for="inputNewPassword">District</label>
+                    <input type="text" class="form-control" id="inputNewPassword" placeholder="District">
+                </div>
+                <div class="col-lg-6 col-md-6 form-group">                  
+                    <label for="inputConfirmNewPassword">Pincode</label>
+                    <input type="text" class="form-control" id="inputConfirmNewPassword" placeholder="Pincode">
+                </div> 
+              </div>
+               <h2 class="margin-bottom-10" align="middle" style="color: #47bac1">Reference Details</h2><br>
+               <div class="row form-group">
+                <div class="col-lg-6 col-md-6 form-group">                  
+                    <label for="inputNewPassword">Reference ID</label>
+                    <input type="Number" class="form-control" id="inputNewPassword" placeholder="Reference ID">
+                </div>
+                <div class="col-lg-6 col-md-6 form-group">                  
+                    <label for="inputConfirmNewPassword">Reference Name</label>
+                    <input type="text" class="form-control" id="inputConfirmNewPassword" placeholder="Reference Name">
+                </div> 
+              </div>
+
+           
+              <div class="form-group text-right">
+                <button type="submit" class="templatemo-blue-button">Submit</button>
+                <button type="reset" class="templatemo-white-button">Reset</button>
+              </div>                           
+            </form>
+          </div>
+          
+        </div>
+        <div class="templatemo-content-container" id="view_customer_verified" style="display:none;">
+          <div class="templatemo-content-widget white-bg">
+            <h2 class="margin-bottom-10" align="middle" style="color: #47bac1">Personal Details</h2>
+           
+            <form action="index.html" class="templatemo-login-form" method="post" enctype="multipart/form-data">
+
+              <div class="row form-group">
+                <div class="col-lg-6 col-md-6 form-group">                  
+                    <label for="inputFirstName">Unique ID</label><br>
+                    <div class="margin-right-15 templatemo-inline-block">
+                      <input type="radio" name="radio" id="r4" value="">
+                      <label for="r4" class="font-weight-400"><span></span>Aadhar</label>
+                    </div>
+                    <div class="margin-right-15 templatemo-inline-block">
+                      <input type="radio" name="radio" id="r5" value="" checked>
+                      <label for="r5" class="font-weight-400"><span></span>Phone Number</label>
+                    </div>
+                    <input type="text" class="form-control" id="inputFirstName" placeholder="Aadhar / Phone Number">                  
+                </div>
+                <div class="col-lg-6 col-md-6 form-group">                                   
+                </div>
+              </div>
+
+              <div class="row form-group">
+                <div class="col-lg-6 col-md-6 form-group">                  
+                    <label for="inputFirstName">First Name</label>
+                    <input type="text" class="form-control" id="inputFirstName" placeholder="First Name">                  
+                </div>
+                <div class="col-lg-6 col-md-6 form-group">                  
+                    <label for="inputLastName">Last Name</label>
+                    <input type="text" class="form-control" id="inputLastName" placeholder="Last Name">                  
+                </div> 
+              </div>
+              <div class="row form-group">
+                <div class="col-lg-6 col-md-6 form-group">                  
+                    <label for="inputUsername">Contact Number</label>
+                    <input type="tel" class="form-control" id="inputUsername" placeholder="+91">                  
+                </div>
+                <div class="col-lg-6 col-md-6 form-group">                  
+                    <label for="inputEmail">Alternate Number</label>
+                    <input type="tel" class="form-control" id="inputEmail" placeholder="+91">                  
+                </div> 
+              </div><hr>
+              <h2 class="margin-bottom-10" align="middle" style="color: #47bac1">Address</h2><br>
+              <div class="row form-group">
+                <div class="col-lg-6 col-md-6 form-group">                  
+                    <label for="inputNewPassword">D/No</label>
+                    <input type="text" class="form-control" id="inputNewPassword" placeholder="Door Number">
+                </div>
+                <div class="col-lg-6 col-md-6 form-group">                  
+                    <label for="inputConfirmNewPassword">Street</label>
+                    <input type="text" class="form-control" id="inputConfirmNewPassword" placeholder="ABC Street">
+                </div> 
+              </div>
+              <div class="row form-group">
+                <div class="col-lg-6 col-md-6 form-group">                  
+                    <label for="inputNewPassword">Locality</label>
+                    <input type="text" class="form-control" id="inputNewPassword" placeholder="Locality">
+                </div>
+                <div class="col-lg-6 col-md-6 form-group">                  
+                    <label for="inputConfirmNewPassword">Village / Town / City</label>
+                    <input type="text" class="form-control" id="inputConfirmNewPassword" placeholder="Location">
+                </div> 
+              </div>
+               <div class="row form-group">
+                <div class="col-lg-6 col-md-6 form-group">                  
+                    <label for="inputNewPassword">District</label>
+                    <input type="text" class="form-control" id="inputNewPassword" placeholder="District">
+                </div>
+                <div class="col-lg-6 col-md-6 form-group">                  
+                    <label for="inputConfirmNewPassword">Pincode</label>
+                    <input type="text" class="form-control" id="inputConfirmNewPassword" placeholder="Pincode">
+                </div> 
+              </div>
+               <h2 class="margin-bottom-10" align="middle" style="color: #47bac1">Reference Details</h2><br>
+               <div class="row form-group">
+                <div class="col-lg-6 col-md-6 form-group">                  
+                    <label for="inputNewPassword">Reference ID</label>
+                    <input type="Number" class="form-control" id="inputNewPassword" placeholder="Reference ID">
+                </div>
+                <div class="col-lg-6 col-md-6 form-group">                  
+                    <label for="inputConfirmNewPassword">Reference Name</label>
+                    <input type="text" class="form-control" id="inputConfirmNewPassword" placeholder="Reference Name">
+                </div> 
+              </div>
+
+           
+              <div class="form-group text-right">
+                <button type="submit" class="templatemo-blue-button">Submit</button>
+                <button type="reset" class="templatemo-white-button">Reset</button>
+              </div>                           
+            </form>
+          </div>
+          
         </div>
       </div>
     </div>
-    
     <!-- JS -->
     <script src="js/jquery-1.11.2.min.js"></script>      <!-- jQuery -->
     <script src="js/jquery-migrate-1.2.1.min.js"></script> <!--  jQuery Migrate Plugin -->
